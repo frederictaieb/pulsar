@@ -1,2 +1,2 @@
 sudo systemctl restart pulsar-backend
-sudo systemctl restart pulsari-frontend
+sudo systemctl restart pulsar-frontend

@@ -14,6 +14,7 @@ export default function useXrpListener(walletAddress: string | undefined) {
       (data) => {
         if (data.type === "transaction") {
           const msg = Buffer.from(data.transaction.Memos[0].Memo.MemoData, 'hex').toString('utf-8') || "No Memo";
+          console.log(msg);
           setMessageContent(msg);
         }
       }
