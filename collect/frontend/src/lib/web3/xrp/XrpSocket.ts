@@ -21,6 +21,7 @@ export function createXrpWebSocket(
   const ws = new WebSocket(url);
 
   ws.onopen = () => {
+    console.log("WebSocket opened");
     ws.send(
       JSON.stringify({
         id: 1,
@@ -32,6 +33,7 @@ export function createXrpWebSocket(
 
   ws.onmessage = (event) => {
     const data: unknown = JSON.parse(event.data);
+    console.log("data received :", data);
     onMessage(data as XrpTransactionMessage);
   };
 

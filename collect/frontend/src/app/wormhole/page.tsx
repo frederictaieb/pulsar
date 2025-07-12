@@ -54,7 +54,7 @@ export default function Wormhole({ onDone }: { onDone: () => void }) {
       }
 
       const data = await res.json();
-      console.log("Réponse de l'API :", data);
+      console.log("data sent :", data);
       setResponse(data.result);
     } catch (error) {
       console.error("Erreur lors de l'envoi :", error);

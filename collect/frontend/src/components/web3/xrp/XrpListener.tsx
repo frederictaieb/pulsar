@@ -23,8 +23,11 @@ export default function XrpListener({
     ipfs_audio: string
   ) => void;
 }) {
+
   const walletAddress = process.env.NEXT_PUBLIC_DST_ADDR;
+  console.log("walletAddress", walletAddress);
   const messageContent = useXrpListener(walletAddress);
+  console.log("messageContent", messageContent);
 
   const [jsonData, setJsonData] = useState<XrpMessage | null>(null);
   const [timestamp, setTimestamp] = useState("");
